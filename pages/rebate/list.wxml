@@ -1,0 +1,49 @@
+<!-- <view class="navbar" style=" z-index:50">
+  <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+    <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+    {{item}}
+  </view>
+</view> -->
+
+<view class="navbar" style=" z-index:50">
+  <view wx:for="{{typebar}}" data-idx="{{index}}" wx:key="unique" class="item {{typeTab==index ? 'active' : ''}}" bindtap="typeTap">
+    <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+    {{item}}
+  </view>
+</view>
+
+<navigator class='person' wx:for="{{list}}" wx:key="index" wx:if='{{typeTab == 0}}' url="./details?orderId={{item.orderId}}&total={{item.rabatePrice}}">
+  <image class='person-image' src='/images/rebate/goods.png'></image>
+  <view class='rabate-price'>{{item.rabatePrice}}</view>
+  <view class='rabate-name'>{{item.buyName}}(ID:{{item.buyNum}})</view>
+  <view class='rabate-content'>购买木头商城相关产品,获得红包{{item.rabatePrice}}元</view>
+  <view class='rabate-time'>{{item.rabateData}}</view>
+</navigator>
+
+<view class='person' wx:for="{{list}}" wx:key="index" wx:if='{{typeTab == 1}}'>
+  <image class='person-image' src='/images/rebate/agent.png'></image>
+  <view class='rabate-price'>{{item.rabatePrice}}</view>
+  <view class='rabate-name'>{{item.buyName}}(ID:{{item.buyNum}})</view>
+  <view class='rabate-content' wx:if='{{item.gradeType == 2}}'>升级为VIP,获得红包{{item.rabatePrice}}元</view>
+  <view class='rabate-content' wx:if='{{item.gradeType == 3}}'>升级为总代,获得红包{{item.rabatePrice}}元</view>
+  <view class='rabate-content' wx:if='{{item.gradeType == 4}}'>升级为区域代理,获得红包{{item.rabatePrice}}元</view>
+  <view class='rabate-content' wx:if='{{item.gradeType == 5}}'>升级为市级代理,获得红包{{item.rabatePrice}}元</view>
+  <view class='rabate-content' wx:if='{{item.gradeType == 6}}'>升级为省级代理,获得红包{{item.rabatePrice}}元</view>
+  
+  <view class='rabate-time'>{{item.rabateData}}</view>
+</view>
+
+<!-- <view class='list'>
+  <view wx:for="{{list}}" wx:key="index">
+    <view class='person'>
+      <view class='flex-row top'>
+        <view class='top-left'>返利到账提醒</view>
+        <view class='top-right'>{{item.rabateData}}</view>
+      </view>
+      <view class='flex-row bottom'>
+        <view class='bottom-left'>{{item.buyName}}({{item.buyNum}})购买{{item.goodsName}}订单金额￥{{item.goodsPrice}}返利到账</view>
+        <view class='bottom-right'>￥{{item.rabatePrice}}</view>
+      </view>
+    </view>
+  </view>
+</view> -->

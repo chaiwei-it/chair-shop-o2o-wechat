@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "全部订单",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "cw-order-list": "/components/order-list/index"
+  }
+}

@@ -1,0 +1,18 @@
+<!--导航菜单-->
+<view class='order-list'>
+  <view class="navbar" style=" z-index:50">
+    <!--循环-->
+    <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+      <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+      {{item}}
+      <!--<text  bindtap="navbarTap">{{item}}</text>-->
+    </view>
+  </view>
+
+  <view class='list'>
+    <view class='list-person' wx:for="{{orderList}}" wx:key="index">
+      <cw-order-list order='{{item}}'></cw-order-list>
+      
+    </view>
+  </view>
+</view>

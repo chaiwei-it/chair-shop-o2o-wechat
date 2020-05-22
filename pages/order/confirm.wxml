@@ -1,0 +1,19 @@
+<view class='order-address'>
+  <navigator url="../address/list?status=1&addressId={{addressId}}">
+    <cw-order-address address='{{address}}'></cw-order-address>
+  </navigator>
+</view>
+
+<view class='goods-list'>
+  <view class='order-goods' wx:for="{{goodsList}}" wx:key="index">
+    <image class='goods-image' src='{{item.goodsImage}}'></image>
+    <view class='goods-name'>{{item.goodsName}}</view>
+    <view class='goods-num'>数量：{{item.goodsNum}}</view>
+    <view class='goods-price'>单价：{{item.goodsPrice}}</view>
+  </view>
+  <view class='order-details'>
+    <view class='goods-total'>共{{goodsNum}}件商品 合计：{{goodsPrice}} 元 </view>
+  </view>
+</view>
+
+<button class="save-btn" bindtap="submitOrder">提交订单</button>

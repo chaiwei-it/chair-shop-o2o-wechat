@@ -1,0 +1,39 @@
+<!-- 商品信息 -->
+<view class='goods'>
+  <!--基本信息-->
+  <view class='goods-image' scroll-y >
+      <image wx:for="{{detailImages}}" wx:key="index" src="{{item}}" class='goods-image' mode="widthFix"></image>
+  </view>
+  
+  <!-- 购买 -->
+  <view class='buy'>
+    <view class='goods-price'>
+      <view class='now-price '>￥{{detail.nowPrice}}</view>
+      <view class='old-price'>原价{{detail.originalPrice}}</view>
+    </view>
+    
+    <view class='add-cart' wx:if="{{detail.status == 1}}">即将开售</view> 
+    <view class='add-cart' wx:elif="{{detail.stock == 0}}">该商品缺货</view>
+    <view class='add-cart' bindtap="addCart" wx:elif="{{detail.status == 2}}">加入购物车</view> 
+    <view class='add-cart' wx:else>已下架</view>
+    <navigator class='cart' url="../cart/cart" open-type="switchTab">
+        <image src="../../images/goods/cart.png" class="cart-image"></image>
+        <view class='cart-num' wx:if="{{cartNum > 0}}">{{cartNum}}</view>
+    </navigator>
+  </view>
+  <!-- canvas制图 -->
+  <canvas style="width: 750px; height: 1337px; position: fixed; margin-top:1500px" canvas-id="myCanvas"></canvas>
+  
+</view>
+
+<!-- 分享按钮 -->
+<view class='forward-button' bindtap='showQrcode'>
+  <image src="/images/goods/code.png" class="forward-image"></image>
+  <view>分享</view>
+  
+</view>
+<!-- 分享页面 -->
+<view class='qrcode' wx:if="{{qrcodeStatus}}" catchtap='hideQrcode'>
+  <cw-curtain></cw-curtain>
+  <cw-share imageUrl='{{imageUrl}}'></cw-share>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "cw-banner": "/components/banner/index",
+    "cw-column": "/components/column/index",
+    "cw-goods-small": "/components/goods-small/index",
+    "cw-goods-length": "/components/goods-length/index"
+  }
+}

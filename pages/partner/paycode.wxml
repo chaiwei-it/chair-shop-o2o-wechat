@@ -1,0 +1,8 @@
+<!--pages/partner/parcode.wxml-->
+<view class='text'>请联系客服（加微信）</view>
+
+<view class='image'>
+  <image src='../../images/code.png' mode="widthFix"></image>
+</view>
+
+<button class="save-btn" bindtap="toUrl">完 成</button>

@@ -1,0 +1,103 @@
+<view class='index'>
+  <!-- 个人信息 -->
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{member.memberAvatar}}" background-size="cover"></image>
+    <view class='user-details'>
+      <view class="userinfo-nickname">{{member.memberName}}</view>
+      <view class="user-level" wx:if="{{userRebate.grade == 1}}">普通会员</view>
+      <view class="user-level" wx:elif="{{userRebate.grade == 2}}">VIP</view>
+      <view class="user-level" wx:elif="{{userRebate.grade == 3}}">总代理</view>
+      <view class="user-level" wx:elif="{{userRebate.grade == 4}}">区域合伙人</view>
+      <view class="user-level" wx:elif="{{userRebate.grade == 5}}">市级合伙人</view>
+      <view class="user-level" wx:elif="{{userRebate.grade == 6}}">省级合伙人</view>
+      <view class="user-level" wx:else>普通用户</view>
+      <view class="user-num">ID:{{userRebate.userNum}}</view>
+    </view>
+    <view class='balance'>
+      <view class='balance-price'>{{userRebate.balance}}</view>
+      <!-- <view class='account-balance'>账户余额</view> -->
+      <navigator class='putforward' url="../putforward/index">立即提现</navigator>
+    </view>
+  </view>
+
+  <!-- 返利信息 -->
+  <view class='rebate flex-row'>
+    <view class='flex-item rebate-person'>
+      <navigator class="list-person" url="./list?id=0">
+        <view class='rebate-data'>今日奖励</view>
+        <view class='rebate-price'>￥{{todayPrice}}</view>
+      </navigator>
+    </view>
+    <view class='flex-item rebate-person'>
+      <navigator class="list-person" url="./list?id=1">
+        <view class='rebate-data'>本月奖励</view>
+        <view class='rebate-price'>￥{{toMonthPrice}}</view>
+      </navigator>
+    </view>
+    <view class='flex-item rebate-person'>
+      <navigator class="list-person" url="./list?id=2">
+        <view class='rebate-data'>累计奖励</view>
+        <view class='rebate-price'>￥{{totalPrice}}</view>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 预计返利 -->
+  <view class='estimate'>
+    <view class='manage-personal'>
+      <navigator class='manage-url' url="./estimate">
+        <view class='manage flex-wrp'>
+          <image src='../../images/32.png' class='manage-image'></image> 
+          <view class='flex-item manage-text'>预计奖励</view>
+          <view class='flex-item manage-symbol estimate-price'>￥{{estimatePrice}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='manage-list'>
+    <view class='manage-personal' bindtap='showModal'>
+      <view class='manage flex-wrp'>
+        <image src='../../images/32.png' class='manage-image'></image> 
+        <view class='flex-item manage-text'>推广海报</view>
+        <view class='flex-item manage-symbol'>></view>
+      </view>
+    </view>
+    <navigator class='manage-personal' url="../user/list">
+      <view class='manage-url' bindtap='download'>
+        <view class='manage flex-wrp'>
+          <image src='../../images/32.png' class='manage-image'></image> 
+          <view class='flex-item manage-text'>成员列表</view>
+          <view class='flex-item manage-symbol'>></view>
+        </view>
+      </view>
+    </navigator>
+    <view class='manage-personal'>
+      <navigator class='manage-url' url="../partner/select">
+        <view class='manage flex-wrp'>
+          <image src='../../images/32.png' class='manage-image'></image> 
+          <view class='flex-item manage-text'>申请代理商</view>
+          <view class='flex-item manage-symbol'>></view>
+        </view>
+      </navigator>
+    </view>
+    <view class='manage-personal'>
+      <navigator class='manage-url' url="../partner/paycode">
+        <view class='manage flex-wrp'>
+          <image src='../../images/32.png' class='manage-image'></image> 
+          <view class='flex-item manage-text'>申请合伙人</view>
+          <view class='flex-item manage-symbol'>></view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <!-- <navigator class='button-person' url="./image?id=1">个人信息图片</navigator>  -->
+  <navigator class='button-person' url="./image?id=2">小程序推广图片</navigator>
+  <view class='button-person button-exit' bindtap="hideModal">取  消</view>
+</view>

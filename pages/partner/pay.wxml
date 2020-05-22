@@ -1,0 +1,38 @@
+<!--pages/partner/pay.wxml-->
+  <view class='pay'>
+    <view class='price' >
+      <view class='price-text'></view>
+        <!-- <view class='flex-row price-input'>
+          <view>￥</view>
+          <input type='text' placeholder="请输入金额" name='price' bindinput ="priceInput" />
+        </view> -->
+      <view class='price-balance'>您需要支付￥{{details.price}}</view>
+    </view>
+  </view>
+
+  <view class='details-text'>详细信息确认</view>
+  <view class='details'>
+    <view class='person flex-row'>
+      <view class='key'>申请级别</view>
+      <view class="value" wx:if="{{details.grade == 1}}">普通会员</view>
+      <view class="value" wx:elif="{{details.grade == 2}}">VIP会员</view>
+      <view class="value" wx:elif="{{details.grade == 3}}">总代理</view>
+      <view class="value" wx:elif="{{details.grade == 4}}">区域合伙人</view>
+      <view class="value" wx:elif="{{details.grade == 5}}">市级合伙人</view>
+      <view class="value" wx:elif="{{details.grade == 6}}">省级合伙人</view>
+    </view>
+    <view class='person flex-row'>
+      <view class='key'>姓名</view>
+      <view class='value'>{{details.username}}</view>
+    </view>
+    <view class='person flex-row'>
+      <view class='key'>电话</view>
+      <view class='value'>{{details.mobile}}</view>
+    </view>
+    <view class='person flex-row'>
+      <view class='key'>身份证号</view>
+      <view class='value'>{{details.cardNum}}</view>
+    </view>
+  </view>
+
+  <button class="save-btn" bindtap="pay" wx:if="{{payStatus == 0}}">支 付</button>

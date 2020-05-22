@@ -1,0 +1,57 @@
+
+  <view class='details-top'>
+    <view class='order-status' wx:if="{{order.orderStatus == 10}}">
+      <cw-order-status status='买家待支付' url='/images/order/pay.png'></cw-order-status>
+    </view>
+    <view class='order-status' wx:if="{{order.orderStatus == 20}}">
+      <cw-order-status status='卖家待发货' url='/images/order/send.png'></cw-order-status>
+    </view>
+    <view class='order-status' wx:if="{{order.orderStatus == 30}}">
+      <cw-order-status status='买家待收货' url='/images/order/receive.png'></cw-order-status>
+    </view>
+    <view class='order-status' wx:if="{{order.orderStatus == 40}}">
+      <cw-order-status status='交易完成' url='/images/order/finish.png'></cw-order-status>
+    </view>
+  </view>
+
+  <view class='order-address'>
+    <cw-order-address address='{{address}}'></cw-order-address>
+  </view>
+
+  <view class='goods-list'>
+    <cw-order-goods order="{{order}}"></cw-order-goods>
+  </view>
+
+  <view class='order-details'>
+    <view class='title'>
+      <cw-column name='订单信息'></cw-column>
+    </view>
+    <view class='order-time'>
+      <view wx:if="{{createTime}}">创建时间　　　<text>{{createTime}}</text></view>
+      <view wx:if="{{paymentTime}}">支付时间　　　<text>{{paymentTime}}</text></view>
+      <view wx:if="{{shippingTime}}">发货时间　　　<text>{{shippingTime}}</text></view>
+      <view wx:if="{{finnshedTime}}">完成时间　　　<text>{{finnshedTime}}</text></view>
+    </view>
+  </view>
+
+  <view class='details-button'>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 0}}">
+      <view class='order-button order-button-error' bindtap="delete">删除订单</view>
+    </view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 10}}">
+      <view class='order-button order-button-error' bindtap="cancel">取消订单</view>
+      <view class='order-button order-button-success' bindtap="pay">立即支付</view>
+    </view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 20}}">
+      <view class='order-button order-button-success' bindtap="remind">提醒发货</view>
+    </view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 30}}">
+      <view class='order-button order-button-error' bindtap="logistics">查看物流</view>
+      <view class='order-button order-button-success' bindtap="confirm">确认收货</view>
+    </view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 40}}">
+      <view class='order-button order-button-error' bindtap="delete">删除订单</view>
+      <!-- <view class='order-button order-button-success' bindtap="after">售后服务</view> -->
+    </view>
+  </view>
+   

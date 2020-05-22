@@ -1,0 +1,11 @@
+<!--pages/user/login.wxml-->
+<view class="login" hidden="{{!isLogin}}">
+  <view class='none'></view>
+  <view class='logo view-center'>
+    <image src='../../images/logo.jpg' class='logo'></image>
+  </view>
+  <view class='title view-center'>木头商城</view>
+  <view class='content view-center'>爱生活，爱购物，点击授权进入木头商城，开启你的护肤之路。</view>
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='login-button view-center'>授权登录</button>
+  <view class='motto view-center'>遇见，绝非偶然，只为更好体验</view>
+</view>

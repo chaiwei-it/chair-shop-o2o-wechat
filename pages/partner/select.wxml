@@ -1,0 +1,19 @@
+<!--pages/partner/select.wxml-->
+<view class='manage-personal' wx:if='{{userRebate.grade < 2}}'>
+  <navigator class='manage-url' url="../partner/agent?grade=2">
+    <view class='manage flex-wrp'>
+      <image src='../../images/32.png' class='manage-image'></image> 
+      <view class='flex-item manage-text'>申请VIP会员</view>
+      <view class='flex-item manage-symbol'>></view>
+    </view>
+  </navigator>
+</view>
+<view class='manage-personal'  wx:if='{{userRebate.grade < 3}}'>
+  <navigator class='manage-url' url="../partner/agent?grade=3">
+    <view class='manage flex-wrp'>
+      <image src='../../images/32.png' class='manage-image'></image> 
+      <view class='flex-item manage-text'>申请总代理</view>
+      <view class='flex-item manage-symbol'>></view>
+    </view>
+  </navigator>
+</view>

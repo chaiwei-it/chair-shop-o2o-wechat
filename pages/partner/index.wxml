@@ -1,0 +1,30 @@
+<!--pages/partner/index.wxml-->
+<!-- <image class='user-info' src='/images/person/userinfo.png'></image> -->
+
+<view class='vip'>
+  <view class='top'>
+    <view class='title'>会员尊享</view>
+  </view>
+  <image class='bottom' src='/images/user/user.png'></image>
+</view>
+
+<view class='grade'>
+  <view class='top'>
+    <view class='title'>VIP会员</view>
+    <navigator class='button' url="./agent?grade=2" wx:if='{{grade < 2 }}'>立即开通</navigator>
+  </view>
+  <view class='interests'>
+    <view wx:for='{{vip}}' class='content'>{{item}}</view>
+  </view>
+</view>
+
+<view class='grade'>
+  <view class='top'>
+    <view class='title'>boss权益</view>
+    <navigator class='button' url="./agent?grade=3" wx:if='{{grade < 3 }}'>立即开通</navigator>
+  </view>
+  <view class='interests'>
+    <view wx:for='{{agent}}' class='content'>{{item}}</view>
+  </view>
+  
+</view>

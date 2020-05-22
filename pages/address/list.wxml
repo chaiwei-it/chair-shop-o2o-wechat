@@ -1,0 +1,22 @@
+<view class='address-personal' wx:for="{{addressList}}" wx:key="index">
+  <view class='address-left' bindtap="selectAddress" data-item='{{item}}'> 
+    <view class='address-image'>
+      <view wx:if="{{item.defaultStatus == 1}}">默</view>
+      <view wx:if="{{item.defaultStatus == 0}}">收</view>
+    </view>
+    
+    <view class='address-datails'>
+      <view class='details-top'>
+        <view class='details-name'>{{item.username}} </view>
+        <view class='details-mobile'>{{item.mobile}}</view>
+      </view>
+      <view class='details-address'>
+        {{item.provinceName}} {{item.cityName}} {{item.areaName}}
+      </view>
+      <view class='details-address'>{{item.address}}</view>
+    </view>
+  </view> 
+  <navigator class='address-right' url="../address/add?addressId={{item.id}}">编辑</navigator> 
+</view>
+
+<navigator class='address-add' url="../address/add">新增地址</navigator>

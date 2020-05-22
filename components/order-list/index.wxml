@@ -1,0 +1,39 @@
+<!--components/order/index.wxml-->
+
+<view class='cw-order-list' bindtap='toPage'>
+  <view class='order-top'>
+    <view class='order-id'>订单编号：{{order.orderSn}}</view>
+    <view class='order-status' wx:if="{{order.orderStatus == 0}}">已取消</view>
+    <view class='order-status' wx:if="{{order.orderStatus == 10}}">待支付</view>
+    <view class='order-status' wx:if="{{order.orderStatus == 20}}">待发货</view>
+    <view class='order-status' wx:if="{{order.orderStatus == 30}}">待收货</view>
+    <view class='order-status' wx:if="{{order.orderStatus == 40}}">交易完成</view>
+  </view>
+  <view class='order-goods' wx:for="{{order.goodsList}}" wx:key="index">
+    <image class='goods-image' src='{{item.goodsImage}}'></image>
+    <view class='goods-name'>{{item.goodsName}}</view>
+    <view class='goods-num'>数量：{{item.goodsNum}}</view>
+    <view class='goods-price'>单价：{{item.goodsPrice}}</view>
+  </view>
+  <view class='order-details'>
+    <view class='goods-total'>合计：{{order.shouldPrice}} 元</view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 0}}">
+      <view class='order-button order-button-error' catchtap="toDelete">删除订单</view>
+    </view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 10}}">
+      <view class='order-button order-button-error' catchtap="toCancel">取消订单</view>
+      <view class='order-button order-button-success' catchtap="toPay">立即支付</view>
+    </view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 20}}">
+      <view class='order-button order-button-success' catchtap="toRemind">提醒发货</view>
+    </view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 30}}">
+      <view class='order-button order-button-error' catchtap="toLogistics">查看物流</view>
+      <view class='order-button order-button-success' catchtap="toConfirm">确认收货</view>
+    </view>
+    <view class='order-status-button' wx:if="{{order.orderStatus == 40}}">
+      <view class='order-button order-button-error' catchtap="toDelete">删除订单</view>
+      <!-- <view class='order-button order-button-success' catchtap="toAfter">售后服务</view> -->
+    </view>
+  </view>
+</view>

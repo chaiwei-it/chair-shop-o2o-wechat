@@ -1,0 +1,68 @@
+/* pages/orders/list.wxss */
+.order-list, page{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.notice {
+    width:28rpx;
+    height:28rpx;
+    color:#fff;
+    text-align:center;
+    background-color:#ec9e14;
+    border-radius:50%;
+    position:absolute;
+    float:left;
+   /* margin-top: 8rpx;*/
+   top:5rpx;
+    font-size: 15rpx;
+    right:30rpx;
+    line-height:30rpx; }
+
+/*顶部导航样式*/
+  .navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #eeeeee; 
+ margin-top: 20rpx;
+ z-index: 50; 
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center;
+ line-height: 60rpx; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active{ 
+ color: #ec9e14; 
+ font-size: 24rpx;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #ec9e14; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+}
+
+.list{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.list-person{
+  width: 690rpx;
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+

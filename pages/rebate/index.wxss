@@ -1,0 +1,205 @@
+@import "../../lib/weui.wxss";
+.index {
+
+}
+
+.userinfo {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  flex-direction:row;
+  background-color: #f74227;
+}
+
+.userinfo-avatar {
+  width: 54px;
+  height: 54px;
+  margin: 40px 20px;
+  border-radius: 50%;
+}
+
+.user-details{
+  height: 100px;
+  width: 160px;
+  margin-top: 28px;
+}
+
+.userinfo-nickname {
+  color: #000;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 8px; 
+}
+
+.user-level{
+  color: #000;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+}
+
+.user-num{
+  color: #000;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+}
+
+.balance{
+  width: 100px;
+  height: 100%;
+}
+
+.account-balance{
+  height: 20px;
+  width: 100%;
+  line-height: 20px;
+  text-align: center;
+  color: #FFF;
+  font-size: 12px;
+}
+
+.balance-price{
+  height: 40px;
+  width: 100%;
+  margin-top: 30px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFF;
+  font-size:22px;
+}
+
+.putforward{
+  background: #FFF;
+  text-align: center;
+  color: #f74227;
+  height: 20px;
+  margin-top: 5px;
+  border-radius:10px 10px 10px 10px;
+}
+
+.rebate{
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  background-color: #fff;
+  flex-direction:row;
+}
+
+.rebate-person{
+  width: 33%;
+  height: 100%
+}
+
+.rebate-data{
+  margin-top: 10px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.rebate-price{
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  color: red;
+  text-align: center;
+}
+
+.estimate{
+  margin-top: 10px;
+  margin-bottom: 20pz;
+  height: 50px;
+}
+
+.estimate-price{
+  color: red;
+}
+
+.manage-list{
+  width: 100%;
+  margin-top: 15px;
+}
+
+.manage-personal{
+  width: 100%;
+  background-color: #FFF;
+  margin-bottom: 2px;
+}
+
+.manage-url{
+  width: 100%;
+  
+}
+.manage{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction:row;
+}
+
+.manage-image{
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
+
+.manage-text{
+  height: 50px;
+  width: 50%;
+  line-height: 50px;
+  font-size: 14px;
+}
+
+.manage-symbol{
+  height: 50px;
+  width: 40%;
+  line-height: 50px;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 20px;
+  float: right;
+}
+
+/* 弹窗 */
+.button-person {
+  width: 100;
+  height: 50px;
+  margin-bottom: 3px;
+  line-height: 50px;
+  background-color: #FFF; 
+  color: #000;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.button-exit{
+  margin-top: 5px; 
+}
+
+/*使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: #fafafa;
+}

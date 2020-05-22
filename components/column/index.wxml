@@ -1,0 +1,5 @@
+<!--components/recommend/index.wxml-->
+<view class='cw-column' bindtap='toPage'>
+  <image class='image' src='./color-yellow.png'></image>
+  <view class='name'>{{name}}</view>
+</view>

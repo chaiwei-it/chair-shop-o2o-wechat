@@ -1,0 +1,36 @@
+<!--pages/putforward/index.wxml-->
+<view class='putforward'>
+  <view class='balance'> 账户余额 ￥{{balance}}</view>
+  <form class='details' bindsubmit="savePersonInfo">
+    <view class="form-item">
+      <view class="form-item-hd">金额：</view>
+      <view class="form-item-bd">
+          <input type="text" placeholder-class="input-placeholder" name="price" value="{{details.price}}" placeholder="请输入金额"/>
+      </view>
+    </view>
+    <view class="form-item">
+        <view class="form-item-hd">支付宝账号：</view>
+        <view class="form-item-bd">
+            <input type="text" placeholder-class="input-placeholder" name="alipayNum" value="{{details.alipayNum}}" placeholder="请输入支付宝账号" maxlength="30"/>
+        </view>
+    </view>
+    <view class="form-item">
+        <view class="form-item-hd">用户真实名：</view>
+        <view class="form-item-bd">
+            <input type="text" placeholder-class="input-placeholder" name="alipayName" value="{{details.alipayName}}" placeholder="请输入用户真实名" maxlength="30"/>
+        </view>
+    </view>
+    <view class="form-item">
+        <view class="form-item-hd">手机号码：</view>
+        <view class="form-item-bd">
+            <input type="number" placeholder-class="input-placeholder" name="mobile" value="{{details.mobile}}" placeholder="请输入手机号码" maxlength="11"/>
+        </view>
+    </view>
+     <button formType="submit" class="save-btn">确定</button>
+  </form> 
+  
+  <navigator class='to-list' url='./list'>
+    <image class='list-image' src='/images/putforward/putforward.png'></image>
+  </navigator>
+
+</view>

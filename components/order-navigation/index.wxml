@@ -1,0 +1,7 @@
+<!--components/order/index.wxml-->
+
+<view class='cw-order-list' bindtap='toPage'>
+  <image class='image' src='{{src}}'></image>
+  <view class='name'>{{name}}</view>
+  <view class='order-num' wx:if="{{num > 0}}">{{num}}</view>
+</view>

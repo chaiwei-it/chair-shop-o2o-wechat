@@ -1,0 +1,24 @@
+/* components/order/index.wxss */
+
+.cw-banner {
+  width: 750rpx;
+  height: 280rpx;
+}
+
+.page-section{
+  width: 100%;
+}
+
+.page-section-spacing{
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-item{
+  display: block;
+  height: 100%;
+}

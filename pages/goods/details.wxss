@@ -1,0 +1,131 @@
+@import '../common/common.wxss';
+
+page{
+  position:relative;
+}
+
+.goods{
+  width: 100%;
+  height: 100%;
+  
+}
+
+/* 基本信息 */
+.goods-image{
+  width: 100%;
+  display: block
+}
+
+
+.buy{
+  position: fixed;
+  width: 750rpx;
+  height:92rpx;
+  bottom: 0px;
+  right: 0px;
+  display: flex; 
+  flex-direction:row;
+  background-color: #FFF;
+}
+
+.goods-price{
+  width: 210rpx;
+  height: 92rpx;
+}
+
+.now-price{
+  margin-top: 8rpx;
+  height: 32rpx;
+  color: #c90404;
+  width: 100%;
+  text-align: center;
+  line-height: 32rpx;
+  font-size: 32rpx;
+}
+
+.old-price{
+  margin-top: 8rpx;
+  height: 22rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 22rpx;
+  font-size: 22rpx;
+  text-decoration: line-through
+}
+
+
+
+.add-cart {
+  width: 390rpx;
+  height: 92rpx;
+  background-color: #f79307;
+  color: #FFF;
+  text-align: center;
+  line-height: 92rpx;
+  font-size: 32rpx;
+}
+
+.cart {
+  width: 150rpx;
+  height: 92rpx;
+  position: relative;
+}
+
+.cart-image{
+  width: 80rpx;
+  height: 80rpx; 
+  margin: 6rpx 35rpx; 
+  position: relative; 
+}
+
+.cart-num{
+  position:absolute;
+  top:10rpx;
+  left:88rpx;
+  height:14px;
+  width:14px;
+  border-radius:50%;
+  background:red;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  line-height: 14px;
+}
+
+/* 二维码弹出按钮 */
+.forward-button{
+  position: fixed;
+  bottom:138rpx;
+  right:28rpx;
+  height:66rpx;
+  width:138rpx;
+  background: #f79307;
+  border-radius:33rpx;
+
+  display: flex; 
+  flex-direction:row;
+  
+}
+
+.forward-image{
+  height: 38rpx;
+  width: 38rpx;
+  margin: 14rpx 12rpx 14rpx 28rpx;
+}
+
+.forward-button view{
+  margin-top: 10rpx;
+  width: 28rpx;
+  line-height: 24rpx;
+  font-size: 20rpx;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+}
+
+
+
+/* 二维码 */
+.qrcode {
+  
+}

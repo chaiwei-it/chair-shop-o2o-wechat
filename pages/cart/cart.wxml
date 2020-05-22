@@ -1,0 +1,30 @@
+<view class="cart">
+  <view wx:if="{{hasList}}">
+    <view class="cart-person" wx:for="{{carts}}" wx:key="{{index}}">
+      <icon class="cart-select" wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}" bindtap="selectList" />
+      <icon class="cart-select" wx:else type="circle" data-index="{{index}}" bindtap="selectList" />
+      <navigator class="cart-image" url="../goods/details?id={{item.goodsId}}">
+        <image src="{{item.goodsImage}}"></image>
+      </navigator>
+      <text class="cart-name">{{item.goodsName}}</text>
+      <text class="cart-specInfo" wx:if="{{item.specInfo}}">规格 {{item.specInfo}}</text>
+      <text class="cart-price">￥{{item.goodsPrice}}</text>
+      <view class="cart-count">
+        <view class="cart-count-down" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</view>
+        <view class="cart-count-num">{{item.goodsNum}}</view>
+        <view class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</view>
+      </view>
+    </view>
+
+    <view class="cart-footer">
+      <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" class="total-select" bindtap="selectAll" />
+      <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll" />
+      <text>全选</text>
+      <view class="cart-toatl-price">￥{{totalPrice}}</view>
+      <view class="order-icon" bindtap="toOrder">结算</view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="cart-no-data">购物车是空的哦~</view>
+  </view>
+</view>

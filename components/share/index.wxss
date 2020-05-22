@@ -1,0 +1,83 @@
+/* components/order/index.wxss */
+
+.cw-banner {
+  width: 750rpx;
+  height: 280rpx;
+}
+
+/*对话框 */
+.code{
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  position: fixed;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+}
+
+.code-image{
+  /* margin-top: 38rpx; */
+  width: 484rpx;
+  position: absolute;
+  margin-left: 134rpx;
+  top: 40rpx;
+  bottom:288rpx;
+  height: auto;
+}
+
+.code-popup {
+  width: 750rpx;
+  height: 248rpx;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius:18rpx 18rpx 0 0;
+  z-index: 2000;
+}
+
+.towx{
+  margin-left: 132rpx;
+  margin-top: 32rpx;
+  width: 128rpx;
+  height: 180rpx;
+  float: left;
+
+}
+
+.toimage{
+  margin-left: 226rpx;
+  margin-top: 32rpx;
+  width: 128rpx;
+  height: 180rpx;
+  float: left;
+}
+
+.towx button::after, .toimage button::after{border:0}
+
+.towx button, .toimage button{
+  width: 128rpx;
+  height: 180rpx;
+  /* position: static; */
+  padding: 0;
+  background-color: #fff;
+  line-height: 0;
+  border: none
+}
+
+.towx-image, .toimage-image{
+  width: 128rpx;
+  height: 128rpx
+}
+
+.towx-name, .toimage-name{
+  width: 128rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #323232;
+  margin-top: 10rpx;
+}

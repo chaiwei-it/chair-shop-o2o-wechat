@@ -1,0 +1,82 @@
+/* pages/user/list.wxss */
+@import "../../lib/weui.wxss";
+
+/*顶部导航样式*/
+  .navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #eeeeee; 
+ margin-top: 20rpx;
+ z-index: 50; 
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center;
+ line-height: 60rpx; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active{ 
+ color: #ec9e14; 
+ font-size: 24rpx;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #ec9e14; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+}
+
+.list{
+  width: 100%;
+}
+.person{
+  width: 100%;
+  height: 80px;
+  margin-top: 2px;
+  background-color: #fff;
+}
+
+.left{
+  width: 60px;
+  height: 60px;
+  margin: 10px;   
+}
+
+.image{
+  width: 60px;
+  height: 60px;
+}
+
+.right{
+  height: 60px; 
+  margin-top: 10px;   
+}
+
+.right-top{
+  height: 20px; 
+  line-height: 20px;
+  font-size: 14px;  
+}
+
+.right-center{
+  height: 20px;  
+  line-height: 20px;
+  font-size: 14px;  
+}
+
+.right-bottom{
+  height: 20px;  
+  line-height: 20px;
+  font-size: 12px;  
+}

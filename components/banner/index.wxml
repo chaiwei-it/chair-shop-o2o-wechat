@@ -1,0 +1,13 @@
+<!--components/order/index.wxml-->
+<view class='cw-banner'>
+  <view class="page-section page-section-spacing swiper">
+    <swiper class='swiper' indicator-dots="true" autoplay="true" circular="true" :vertical="false"
+      interval="3000" duration="500">
+      <block wx:for="{{bannerList}}" wx:key="index">
+        <swiper-item bindtap='toPage' data-banner="{{item}}">
+          <image class="swiper-item" src="{{item.imageUrl}}" mode="scaleToFill"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>

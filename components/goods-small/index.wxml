@@ -1,0 +1,19 @@
+<!--components/recommend/index.wxml-->
+<view class='cw-goods' bindtap='toPage' data-id='{{goods.id}}'>
+  <image src="{{goods.thumbnailImage}}" class="goods-image" mode="scaleToFill">
+    <view class='goods-activity'>限时抢购</view>
+  </image>
+  <view class="goods-name">
+    <text class="goods-name-text">{{goods.name}}</text>
+  </view>
+  <view class="goods-details">
+    <view class="goods-price">
+      <view class="goods-price-text">￥{{goods.nowPrice}}</view>
+      <view class='old-price'>￥{{goods.originalPrice}}</view>
+    </view>
+    <view class='goods-status' wx:if="{{goods.status == 1}}">即将开售</view>
+    <view class='goods-status' wx:elif="{{goods.stock == 0}}">该产品缺货</view>
+    <view class='goods-status' wx:elif="{{goods.status == 3}}">已下架</view>
+    <view class='goods-status' wx:else></view>
+  </view>
+</view>

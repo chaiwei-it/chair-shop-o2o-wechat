@@ -1,0 +1,9 @@
+<!--components/recommend/index.wxml-->
+<view class='cw-button'>
+  <view class='underline' >
+    <image class='image' src='{{src}}'></image>
+    <view class='name'>{{name}}</view>
+    <view class='toName'>{{toName}}</view>
+    <image class='image' src='./buttom-right.png'></image>
+  </view>
+</view>

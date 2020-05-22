@@ -1,0 +1,140 @@
+<view>
+  <!-- 用户信息 -->
+  <view class="userinfo">
+    <image class='user-head' src="{{user.headImage}}" background-size="cover"></image>
+    <view class='user-details'>
+      <view class="user-username">{{user.username}}</view>
+      <view class='grade'>
+        <view class="user-grade" wx:if="{{user.grade == 1}}">普通会员</view>
+        <view class="user-grade" wx:elif="{{user.grade == 2}}">VIP会员</view>
+        <view class="user-grade" wx:elif="{{user.grade == 3}}">总代理</view>
+        <view class="user-grade" wx:elif="{{user.grade == 4}}">区域合伙人</view>
+        <view class="user-grade" wx:elif="{{user.grade == 5}}">市级合伙人</view>
+        <view class="user-grade" wx:elif="{{user.grade == 6}}">省级合伙人SVIP</view>
+        <view class="user-grade" wx:else>普通用户</view>
+        <navigator class='upgrade' url="../partner/index">会员升级</navigator>
+      </view>
+      <view class="user-id">ID: {{user.userNum}}</view>
+    </view>
+  </view>
+  <!-- 账户余额 -->
+  <view class='user-price'>
+    <view class='account'>
+      <view class='account-name'>账户余额</view>
+      <view class='account-details'>
+        <view class='account-price'>￥{{user.balance}}</view>
+        <navigator class='account-putforward' url="../putforward/index">
+          <view class='putforward'>立即提现</view>
+          <image class='putforward-image' src='/images/person/buttom-right.png'></image>
+        </navigator>
+        
+      </view>
+    </view>
+    <view class='rebate-details'>
+      <my-rebate name='今日红包' price='{{todayPrice}}' url='../rebate/list?id=0'></my-rebate>
+      <my-rebate name='本月红包' price='{{toMonthPrice}}' url='../rebate/list?id=1'></my-rebate>
+      <my-rebate name='累计红包' price='{{totalPrice}}' url='../rebate/list?id=2'></my-rebate>
+      <!-- <my-rebate name='预计奖励' price='78942.12' url='../rebate/list?id=3'></my-rebate> -->
+    </view>
+  </view>
+</view>
+
+
+<!-- 我的订单 -->
+<view class='order'>
+    <!-- <cw-button name='我的订单' toName='全部订单' url="/pages/order/list?id=0"></cw-button> -->
+    <view class='all-order' url="/pages/order/list?id=0">
+      <view class='all-name'>我的订单</view>
+      <navigator class='all-toName' url="/pages/order/list?id=0">全部订单</navigator>
+      <image class='all-right-image' src='/images/person/buttom-right.png'></image>
+    </view>
+  <view class='order-botton'>
+    <view class='order-person'>
+    <my-order name='待支付' src= '/images/person/not_pay.png' url='../order/list?id=1' num='{{notPay}}'></my-order>
+    </view>
+    <view class='order-person'>
+      <my-order name='待发货' src= '/images/person/not_collect_goods.png' url='../order/list?id=2' num='{{notCollect}}'></my-order>
+    </view>
+    <view class='order-person'>
+      <my-order name='待收货' src= '/images/person/not_deliver_goods.png' url='../order/list?id=3' num='{{notDeliver}}'></my-order>
+    </view>
+    <view class='order-person'>
+      <my-order name='交易完成' src= '/images/person/order_finish.png' url='../order/list?id=4' num='{{orderFinish}}'></my-order>
+    </view>
+  </view>
+  
+  
+</view>
+
+<navigator url='/pages/user/list' class='user-rebate' >
+  <!-- <cw-button name='我的粉丝' src= '/images/person/user.png' url='/pages/user/list'></cw-button> -->
+  <view class='all-rebate' >
+    <view class='rebate-name'>我的粉丝</view>
+    <image class='all-right-image' src='/images/person/buttom-right.png'></image>
+  </view>
+  <view class='user-num'>
+    <view class='user-total'>{{totalNum}}</view>
+    <view class='user-today today-left'>
+      <view class='today-name'>今日</view>
+      <view class='today-num'>{{todayNum}}</view>
+    </view>
+    <view class='user-today today-right'>
+      <view class='today-name'>昨日</view>
+      <view class='today-num'>{{yesterdayNum}}</view>
+    </view>
+  </view>
+</navigator>
+
+<view class='my-user-rebate' bindtap='changeParentStatus'>
+  <cw-button name='我的邀请人' src= '/images/person/user.png'></cw-button>
+</view>
+<view wx:if='{{parentStatus}}'>
+  <view class='parent-user' wx:if='{{parentUser.id}}'>
+    <image class='parent-image' src='{{parentUser.headImage}}'></image>
+    <view class='parent-datail'>
+      <view class='parent-name'>{{parentUser.username}}</view>
+      <view class='parent-time'>{{parentUser.createDate}}</view>
+    </view>
+    <!-- <image class='right-image' src='/images/person/buttom-right.png'></image> -->
+  </view>
+  <view wx:else class='parent-never' wx:else>您是最顶级</view>
+  
+</view>
+
+<!-- 管理按钮 -->
+<view class='manage'>
+  <cw-button name='地址管理' src= '/images/person/address.png' url='/pages/address/list'></cw-button>
+  
+  <!-- <cw-button name='绑定手机号' src= '/images/person/user.png' url='/pages/address/list'></cw-button> -->
+  <view class='manage-button'>
+    <button class='mobile-button clean-button' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      <image class='image' src='/images/person/mobile.png'></image>
+      <view class='name'>绑定手机号</view>
+      <image class='right-image' src='/images/person/buttom-right.png'></image>
+    </button>
+  </view>
+  
+  <view bindtap='download'>
+    <cw-button name='推广海报' src= '/images/person/download.png'></cw-button>
+  </view>
+  <view class='manage-button'>
+    <button class='underline clean-button' open-type="contact">
+      <image class='image' src='/images/person/contact.png'></image>
+      <view class='name'>联系客服</view>
+      <image class='right-image' src='/images/person/buttom-right.png'></image>
+    </button>
+  </view>
+</view>
+
+<modal hidden="{{hiddenmodalput}}" title="绑定手机号" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="updateMobile">
+    <view class='mobile'>
+      <input class='mobile-input input' type='text' placeholder="请输入手机号" name='mobile' bindinput ="mobileInput" />
+      <view class='get-code' wx:if="{{!isShow}}"  bindtap='getCode'>获取验证码</view>
+      <view class='get-code' wx:if="{{isShow}}">{{sec}}秒后重新发送</view>
+    </view>
+    <view class='code'>
+      <input class='input' type='text' placeholder="验证码" name='mobile' bindinput ="vCodeInput" />
+    </view>
+</modal>
+
+<canvas style="width: 750px; height: 1337px; position: fixed; margin-top:500px" canvas-id="myCanvas"></canvas>

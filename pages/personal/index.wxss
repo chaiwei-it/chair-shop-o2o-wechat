@@ -1,0 +1,363 @@
+page{
+  width: 750rpx;
+  height: 100%；
+}
+.userinfo {
+  width: 750rpx;
+  height: 255rpx;
+  background-color: #fdaf47;
+  display: flex;
+  flex-direction:row;
+}
+
+.user-head {
+  width: 124rpx;
+  height: 124rpx;
+  margin-left: 30rpx;
+  margin-top: 24rpx;
+  border-radius: 50%;
+}
+
+.user-details {
+  margin-left: 10rpx;
+  height: 170rpx;
+  width: 556rpx;
+  color: #fff
+}
+
+.user-username {
+  height: 30rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.grade {
+  margin-top: 18rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+}
+
+.user-grade {
+  font-size: 24rpx;
+  float: left;
+}
+
+.upgrade {
+  margin-left: 8rpx;
+  float: left;
+  font-size: 20rpx;
+  border-bottom: 1px solid #fff;
+  font-weight: bold
+}
+
+.user-id {
+  height: 24rpx;
+  font-size: 24rpx;
+  margin-top: 18rpx;
+}
+
+.user-price{
+  width: 694rpx;
+  position: absolute;
+  left: 28rpx;
+  top: 170rpx;
+  background-color: #fff;
+  border-radius:8px 8px 0px 0px;
+}
+
+.account{
+  height: 136rpx;
+  width: 100%;
+  border-bottom: solid 1rpx #eeeeee;
+}
+
+.account-name{
+  height: 80rpx;
+  margin-left: 28rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+.account-details{
+  width: 638rpx;
+  margin-left: 28rpx;
+  height: 40rpx;
+}
+
+.account-price{
+  height: 100%;
+  line-height: 40rpx;
+  float: left;
+  color: #ff6262;
+}
+
+.account-putforward {
+  height: 100%;
+  line-height: 40rpx;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  color: #999999;
+}
+
+.putforward-image {
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}
+
+.rebate-details{
+  display: flex;
+  flex-direction: row;
+}
+
+.order{
+  margin-top: 228rpx;
+  background-color: #fff;
+  
+}
+
+.order-botton{
+  display: flex;
+  flex-direction: row;
+}
+
+.order-person {
+  width: 138rpx;
+  height: 138rpx;
+  margin: 0 24rpx;
+}
+
+.manage{
+  margin-top: 20rpx;
+}
+
+.manage-button{
+  width: 100%;
+  background-color: #fff;
+}
+
+.clean-button{
+  padding: 0;
+  background-color: #fff;
+}
+
+button::after{
+  border:0
+}
+
+.mobile-button, .underline{
+  width: 690rpx;
+  height: 82rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1rpx #eeeeee;
+}
+
+.image {
+  width: 42rpx;
+  height: 42rpx;
+  margin: 20rpx;
+}
+
+.name {
+  width: 390rpx;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #333333;
+  text-align: left;
+}
+
+.right-image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 140rpx;
+}
+
+.mobile, .code{
+  width: 100%;
+  height: 64rpx;
+  display: flex;
+  flex-direction:row;
+  
+}
+
+.code{
+  margin-top: 20rpx;
+}
+
+.input{
+  text-indent:10rpx;
+  background-color: #eeeeee;
+  font-size: 24rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+.mobile-input{
+  width: 70%;
+}
+
+.get-code{
+  width: 30%;
+  height: 64rpx;
+  line-height: 64rpx;
+  background-color: #f79307;
+  color: #FFF;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.all-order {
+  width: 690rpx;
+  height: 82rpx;
+  margin-left: 30rpx;
+  box-sizing: border-box;
+  border-bottom: solid 1rpx #eeeeee;
+  display: flex;
+  flex-direction: row;
+}
+
+.all-name {
+  width: 390rpx;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #333333;
+  margin-left: 10rpx;
+}
+
+.all-toName {
+  width: 200rpx;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #999999;
+  text-align: right
+}
+
+.all-right-image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.user-rebate{
+  width: 750rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.rebate-name{
+  width: 610rpx;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #333333;
+  margin-left: 10rpx;
+}
+
+.all-rebate {
+  width: 690rpx;
+  height: 82rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-num{
+  height: 140rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-total{
+  height: 140rpx;
+  width: 200rpx;
+  line-height: 140rpx;
+  /* margin-left: 50rpx; */
+  margin-right: 250rpx;
+  font-size: 50rpx;
+  text-align: center;
+  color: #000
+}
+
+.user-today{
+  height: 140rpx;
+  width: 120rpx;
+  
+}
+
+.today-left{
+
+}
+
+.today-right{
+
+}
+
+.today-name{
+  width: 120rpx;
+  text-align: center;
+  height: 36rpx;
+  margin-top: 36rpx;
+}
+
+.today-num{
+  width: 120rpx;
+  text-align: center;
+  height: 30rpx;
+}
+
+.today-right .today-name, .today-right .today-num{
+  border-left: solid 1rpx #eeeeee; 
+}
+
+.my-user-rebate{
+  margin-top: 10rpx;
+}
+
+.parent-user{
+  width: 750rpx;
+  height: 82rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.parent-image{
+  width: 52rpx;
+  height: 52rpx;
+  margin: 20rpx 20rpx 20rpx 30rpx;
+}
+
+.parent-datail{
+  width: 398rpx;
+  /* margin-right: 100rpx; */
+}
+
+.parent-name{
+  height:30rpx;
+  margin-top: 15rpx; 
+  line-height: 30rpx;
+  font-size: 24rpx;
+
+}
+
+.parent-time{
+  height:30rpx; 
+  line-height: 30rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.parent-never{
+  line-height: 82rpx;
+  height: 82rpx;
+  width: 750rpx;
+  text-align: center;
+  background-color: #fff;
+}
+

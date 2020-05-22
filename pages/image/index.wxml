@@ -1,0 +1,3 @@
+  <view class='images' scroll-y >
+      <image wx:for="{{imageList}}" wx:key="index" src="{{item}}" class='image' mode="widthFix"></image>
+  </view>

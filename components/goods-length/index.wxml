@@ -1,0 +1,8 @@
+<!--components/recommend/index.wxml-->
+<view class='cw-length' bindtap='toPage' data-id='{{goods.id}}'>
+  <image class="goods-image" src="{{goods.oblongImage}}" mode="scaleToFill"></image>
+  <view class='goods-name'>{{goods.name}}</view>
+  <view class='goods-subtitle'>{{goods.subtitle}}</view>
+  <view class="goods-price">￥{{goods.nowPrice}}</view>
+  <view class='goods-originalPrice'>￥{{goods.originalPrice}}</view>
+</view>

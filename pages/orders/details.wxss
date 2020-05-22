@@ -1,0 +1,181 @@
+.address-personal{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+}
+
+.address-list{
+  width: 60px;
+  height: 60px;
+}
+
+.address-list image{
+  width: 24px;
+  height: 24px;
+  margin: 18px;
+}
+
+.address-bottom{
+  width: 100%;
+  height: 3px;
+  background-image: url(https://shop-v1.oss-cn-beijing.aliyuncs.com/background/address_bottom.jpg)
+}
+
+.list-item{
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  height: 70px;
+}
+
+.default-status{
+  width: 60px;
+  height: 60px;
+}
+
+.default-status-image {
+  width: 20px;
+  height: 20px;
+  margin: 25px 20px;
+}
+
+.datails{
+  height: 70px;
+  width: 100%;
+}
+
+.details-name{
+  color: #000;
+  margin-top: 5px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.details-address{
+  margin-right: 30px;
+  height: 40px;
+  line-height: 20px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*设置成弹性盒子 */
+  display: -webkit-box;
+  /*显示的个数 */
+  -webkit-line-clamp: 2;
+  /* 属性规定框的子元素应该被水平或垂直排列。 */
+  -webkit-box-orient: vertical;
+}
+
+.cart-list{
+    position: relative;
+    padding: 20rpx 20rpx 20rpx 285rpx;
+    height: 185rpx;
+    border-bottom: 1rpx solid #e9e9e9;
+
+    background-color: #FFF;
+}
+.cart-list .cart-pro-select{
+    position: absolute;
+    left: 20rpx;
+    top: 90rpx;
+    width: 45rpx;
+    height: 45rpx;
+}
+
+.cart-list .cart-thumb{
+    position: absolute;
+    top: 20rpx;
+    left: 85rpx;
+    width: 185rpx;
+    height: 185rpx;
+}
+.cart-list .cart-pro-name{
+    display: inline-block;
+    width: 300rpx;
+    height: 105rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+}
+.cart-list .cart-pro-price{
+    display: inline-block;
+    float: right;
+    height: 105rpx;
+    line-height: 50rpx;
+     color: #ff7800;
+}
+
+.cart-list .cart-spec-box{
+    position: absolute;
+    left: 285;
+    bottom: 80rpx;
+    width: 250rpx;
+    height: 40rpx;
+}
+.cart-list .cart-spec-box text{
+    display: inline-block;
+    line-height: 40rpx;
+    text-align: center;
+}
+
+.cart-list .cart-count-box{
+    position: absolute;
+    left: 285;
+    bottom: 20rpx;
+    width: 250rpx;
+    height: 40rpx;
+}
+.cart-list .cart-count-box text{
+    display: inline-block;
+    line-height: 40rpx;
+    text-align: center;
+}
+
+.order-submit{
+  margin-top: 5px;
+   margin-bottom: 5px;
+  /* height: 90px; */
+  width: 100%;
+  background-color: #FFF;
+}
+
+.order-total{
+  height: 40px;
+  width: 84%;
+  margin-left: 8%;
+  display: flex;
+  flex-direction:row;
+}
+
+.order-total view{
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+}
+
+.total-price{
+  text-align: right;
+}
+
+.save-btn {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 40px;
+    background-color: #2EA9DF;
+    border-radius: 6rpx;
+    color: #fff;
+}
+
+.del-btn {
+    width: 90%;
+    height: 40px;
+    margin: 8px auto;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 40px;
+    background-color: red;
+    border-radius: 6rpx;
+    color: #fff;
+}

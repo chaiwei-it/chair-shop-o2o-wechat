@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "cw-curtain": "/components/curtain/index",
+    "cw-share": "/components/share/index"
+  }
+}

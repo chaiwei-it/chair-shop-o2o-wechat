@@ -1,0 +1,26 @@
+/* pages/partner/parcode.wxss */
+
+.text{
+  height: 100px;
+  width: 100%;
+  line-height: 100px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.image{
+  width: 300px;
+  margin: 0 auto;
+}
+
+.save-btn {
+    width: 90%;
+    height: 80rpx;
+    margin: 0 auto;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #2EA9DF;
+    border-radius: 6rpx;
+    color: #fff;
+}

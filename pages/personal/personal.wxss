@@ -1,0 +1,236 @@
+/**index.wxss**/
+
+.personal{
+  background-color: #fafafa; 
+  height: 100%;
+}
+
+.personal-image{
+  height: 140px;
+  width: 100%;
+  padding: 1px;
+
+}
+
+.userinfo {
+  width: 350px;
+  height: 100px;
+  margin: 20px;
+  display: flex;
+  flex-direction:row;
+}
+
+.userinfo-avatar {
+  width: 54px;
+  height: 54px;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.user-details{
+  height: 100px;
+  width: 300px;
+}
+
+.userinfo-nickname {
+  color: #000;
+  width: 260px;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 8px; 
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap */
+}
+
+.user-level{
+  color: #000;
+  width: 200px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.user-num{
+  color: #000;
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.all-order{
+  background-color: #FFF;
+  width: 100%;
+  height: 50px;
+  flex-direction:row;
+  margin-bottom: 4px;
+}
+
+.order-title{
+  width: 30%;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.all-order-button{
+  /* width: 30%; */
+  height: 50px;
+  float: right;
+  margin-right: 10px;
+}
+
+.all-order-button-text{
+  color: #8e8e8e;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+.order-button{
+  background-color: #FFF;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction:row;
+}
+
+.order-button-single {
+  width: 25%;
+  height: 50px;
+}
+
+.order-singer{
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.order-url{
+  width: 50px;
+  height: 45px;
+  margin-top: 5px;
+  flex-direction:column;
+}
+
+.order-single-image{
+  width: 30x;
+  height: 30px;
+  margin: 0px 12px;
+  position: relative; 
+}
+
+.order-single-image image{
+  width: 25px;
+  height: 25px;
+}
+
+.order-num {
+  position:absolute;
+  top:-4px;
+  left:16px;
+  border-radius:50%;
+  font-size: 10px;
+  color: red;
+  border: 1px solid red;
+  text-align: center;
+  height: 14px;
+  width: 14px;
+  line-height: 14px;
+  background-color: #FFF;
+}
+
+.order-singer-text{
+  height: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.manage-list{
+  width: 100%;
+  margin-top: 15px;
+}
+
+.manage-personal{
+  width: 100%;
+  background-color: #FFF;
+  margin-bottom: 1px;
+}
+
+.manage-url{
+  width: 100%;
+  
+}
+.manage{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction:row;
+}
+
+.manage-image{
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
+
+.manage-text{
+  height: 50px;
+  width: 70%;
+  line-height: 50px;
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.manage-symbol{
+  height: 50px;
+  width: 20%;
+  line-height: 50px;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 10px;
+  float: right;
+}
+
+/* .mobileButton{
+  height: 100%;
+  width: 100%;
+} */
+
+.mobileButton{
+  border:none;
+  background: none;
+  list-style: none;
+  outline:none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  color: #000;
+  font-size: 14px;
+  display: flex;
+}
+
+.mobile-input{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction:row;
+}
+
+.mobile{
+  width: 70%;
+  height: 50px;
+  line-height: 50px;
+}
+
+.get-code{
+  margin-top: 10px;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  background-color: red;
+  color: #FFF;
+  border-radius: 4px;
+  text-align: center
+}

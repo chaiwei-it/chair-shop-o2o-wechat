@@ -1,0 +1,68 @@
+<!--导航菜单-->
+<view class="navbar" style=" z-index:50">
+  <!--循环-->
+  <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+    <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+    {{item}}
+    <!--<text  bindtap="navbarTap">{{item}}</text>-->
+  </view>
+</view>
+
+<view class='list'>
+  <block wx:for="{{orderList}}" wx:key="index">
+    <view class='order-person'>
+      <navigator class='order-url' url="../orders/details?orderId={{item.id}}">
+        <view class='order-details'>
+          <view class='order-num'>订单编号：{{item.orderSn}}</view>
+          <view class='order-status' wx:if="{{item.orderStatus == 10}}">待支付</view>
+          <view class='order-status' wx:elif="{{item.orderStatus == 20}}">待发货</view>
+          <view class='order-status' wx:elif="{{item.orderStatus == 30}}">待收货</view>
+          <view class='order-status' wx:elif="{{item.orderStatus == 40}}">交易完成</view>
+          <view class='order-status'  wx:elif="{{item.orderStatus == 0}}">交易取消</view>
+        </view>
+        <scroll-view class="goods-view scroll-view_H" scroll-x >
+          <block wx:for="{{item.goodsList}}" wx:key="goodsIndex" wx:for-item="goodsItem">
+            <!-- <navigator class='goods-url' url="../details/details?id={{goodsItem.goodsId}}"> -->
+              <image src="{{goodsItem.goodsImage}}" class="goods-image"></image>
+            <!-- </navigator> -->
+          </block>
+        </scroll-view>
+        <view class='order-total'>
+          <text class='order-total-should'>应付: </text>
+          <text class='order-total-price'> ￥{{item.shouldPrice}} </text>
+          <!-- <text class='order-total-num'> 共{{item.num}}件</text> -->
+        </view>
+      </navigator>
+    </view>
+  </block>
+</view>
+
+<!--全部订单-->
+<view hidden="{{currentTab !== 0}}" id="one">
+  <!-- <template is="list" data="{{maintainRecordlist}}" /> -->
+</view>
+
+<!--待支付-->
+<view hidden="{{currentTab !== 1}}" id="one">
+  <!-- <template is="list" data="{{maintainRecordlist}}" /> -->
+</view>
+
+<!--待发货-->
+<view hidden="{{currentTab !== 2}}" id="one">
+  <!-- <template is="list" data="{{maintainRecordlist}}" /> -->
+</view>
+
+<!--待收货-->
+<view hidden="{{currentTab !== 3}}" id="one">
+  <!-- <template is="list" data="{{maintainRecordlist}}" /> -->
+</view>
+
+<!--交易完成-->
+<view hidden="{{currentTab !== 4}}" id="one">
+  <!-- <template is="list" data="{{maintainRecordlist}}" /> -->
+</view>
+
+<!--交易冻结-->
+<view hidden="{{currentTab !== 5}}" id="one">
+  <!-- <template is="list" data="{{maintainRecordlist}}" /> -->
+</view>

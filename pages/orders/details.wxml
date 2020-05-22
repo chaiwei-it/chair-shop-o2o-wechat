@@ -1,0 +1,50 @@
+<view>
+  <view class='address-personal'>
+    <!-- <navigator url="../address/list?status=1&addressId={{addressId}}"> -->
+      <view class='list-item'>
+        <view class='default-status' >
+          <image class='default-status-image' src='../../images/address.png'></image>
+        </view>
+        <view class='datails'>
+          <view class='details-name'>{{order.address.username}} {{order.address.mobile}}</view>
+          <view class='details-address'>
+            {{order.address.address}}
+          </view>
+        </view>
+        <view class='address-list'></view>
+      </view>
+    <!-- </navigator> -->
+    <view class='address-bottom'></view>
+  </view>
+
+  <view>
+    <view class="cart-list" wx:for="{{order.goodsList}}" wx:key="{{index}}">
+        <navigator url="../goods/details?id={{item.goodsId}}">
+          <image class="cart-thumb" src="{{item.goodsImage}}"></image>
+        </navigator>
+        <text class="cart-pro-name">{{item.goodsName}}</text>
+        <text class="cart-pro-price">￥{{item.goodsPrice}}</text>
+        <view class="cart-spec-box">
+          <text class="cart-spec-num">{{item.specInfo}}</text>
+        </view>
+        <view class="cart-count-box">
+          <text class="cart-count-num">共{{item.goodsNum}}件</text>
+        </view>
+      </view>
+  </view>
+
+  <view class='order-submit'>
+    <view class='order-total'>
+       <view class='total-num'></view> 
+      <view class='total-price'>合计：￥{{order.shouldPrice}}</view>
+    </view>
+    <button class="save-btn" bindtap="pay" wx:if="{{order.orderStatus == 10}}">微信支付</button>
+
+    <button class="del-btn" bindtap="cancel" wx:if="{{order.orderStatus == 10}}">取 消</button>
+
+    <button class="save-btn" bindtap="confirm" wx:if="{{order.orderStatus == 30}}">确认收货</button>
+
+    <button class="del-btn" bindtap="delete" wx:if="{{order.orderStatus == 0 || order.orderStatus == 40}}">删 除</button>
+  </view>
+   
+</view>

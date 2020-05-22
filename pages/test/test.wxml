@@ -1,0 +1,5 @@
+<!-- <form bindsubmit="formSubmit" report-submit="true">
+  <button formType="submit">Submit</button>
+</form> -->
+
+<web-view src="https://www.baidu.com/"></web-view>

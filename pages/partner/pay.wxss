@@ -1,0 +1,91 @@
+/* pages/partner/pay.wxss */
+@import "../../lib/weui.wxss";
+
+.pay{
+  width: 100%;
+
+}
+
+.price{
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+}
+
+.price-text{
+  height: 30px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.price-input{
+  height: 60px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.price-input view{
+  height: 60px;
+  line-height: 60px;
+  font-size: 28px;
+}
+
+.price-input input{
+  height:60px;
+  width: 90%;
+  font-size: 28px;
+}
+
+.price-balance{
+  height: 30px;
+  line-height: 30px;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 20px;
+  color: #656565;
+}
+
+.details-text{
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  color: #656565;
+
+}
+
+.details{
+  width: 100%;
+}
+
+.person{
+  width: 100%;
+  height: 35px;
+  margin-top :2px; 
+  background-color: #fff;
+}
+
+.key{
+  width: 28%;
+  margin-left: 2%;
+  line-height: 35px;
+  color: #656565;
+}
+
+.value{
+  width: 68%;
+  text-align: right;
+  line-height: 35px;
+  color: #656565;
+}
+
+.save-btn {
+    width: 90%;
+    height: 80rpx;
+    margin: 10px auto;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #2EA9DF;
+    border-radius: 6rpx;
+    color: #fff;
+}

@@ -1,0 +1,142 @@
+<!--index.wxml-->
+<view class="personal">
+  <view class='personal-image'>
+    <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userRebate.headImage}}" background-size="cover"></image>
+      <view class='user-details'>
+        <view class="userinfo-nickname">{{userRebate.username}}</view>
+        <view class="user-level" wx:if="{{userRebate.grade == 1}}">普通会员</view>
+        <view class="user-level" wx:elif="{{userRebate.grade == 2}}">VIP会员</view>
+        <view class="user-level" wx:elif="{{userRebate.grade == 3}}">总代理</view>
+        <view class="user-level" wx:elif="{{userRebate.grade == 4}}">区域合伙人</view>
+        <view class="user-level" wx:elif="{{userRebate.grade == 5}}">市级合伙人</view>
+        <view class="user-level" wx:elif="{{userRebate.grade == 6}}">省级合伙人SVIP</view>
+        <view class="user-level" wx:else>普通用户</view>
+        <view class="user-num">ID: {{userRebate.userNum}}</view>
+      </view>
+      
+    </view>
+  </view>
+  <view class='all-order'>
+    <view class='order-title'>我的订单</view>
+    <view class='all-order-button'>
+      <navigator url="../orders/list?id=0">
+        <view class='all-order-button-text'>全部订单 ></view>
+      </navigator>
+    </view>
+  </view>
+  <view class='order-button'>
+    <view class='order-button-single'>
+      <view class='order-singer'>
+         <navigator  url="../orders/list?id=1">
+          <view class='order-url'>
+            <view class='order-single-image'>
+              <image class='' src='../../images/not_pay.png'></image>
+              <view class='order-num' wx:if="{{notPay > 0}}">{{notPay}}</view>
+            </view>
+            <view class='order-singer-text'>待支付</view> 
+          </view>
+         </navigator>
+      </view>
+    </view>
+    <view class='order-button-single'>
+      <view class='order-singer'>
+         <navigator  url="../orders/list?id=2">
+          <view class='order-url'>
+            <view class='order-single-image'>
+              <image class='' src='../../images/not_collect_goods.png'></image>
+              <view class='order-num' wx:if="{{notCollect > 0}}">{{notCollect}}</view>
+            </view>
+            <view class='order-singer-text'>待发货</view> 
+          </view>
+         </navigator>
+      </view>
+    </view>
+    <view class='order-button-single'>
+      <view class='order-singer'>
+         <navigator  url="../orders/list?id=3">
+          <view class='order-url'>
+            <view class='order-single-image'>
+              <image class='' src='../../images/not_deliver_goods.png'></image>
+              <view class='order-num' wx:if="{{notDeliver > 0}}">{{notDeliver}}</view>
+            </view>
+            <view class='order-singer-text'>待收货</view> 
+          </view>
+         </navigator>
+      </view>
+    </view>
+    <view class='order-button-single'>
+      <view class='order-singer'>
+         <navigator  url="../orders/list?id=4">
+          <view class='order-url'>
+            <view class='order-single-image'>
+              <image class='' src='../../images/order_finish.png'></image>
+              <view class='order-num' wx:if="{{orderFinish > 0}}">{{orderFinish}}</view>
+            </view>
+            <view class='order-singer-text'>交易完成</view> 
+          </view>
+         </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='manage-list'>
+    <view class='manage-personal'>
+      <navigator class='manage-url' url="../address/list?status=0&addressId=0">
+        <view class='manage flex-wrp'>
+          <image src='../../images/address.png' class='manage-image'></image> 
+          <view class='flex-item manage-text'>地址管理</view>
+          <view class='flex-item manage-symbol'>></view>
+        </view>
+      </navigator>
+    </view>
+    <!-- <view  class='manage-personal'>
+      <navigator class='manage-url' url="">
+        <view class='manage flex-wrp'>
+          <image src='../../images/service.png' class='manage-image'></image> 
+          <view class='flex-item manage-text'>联系客服</view>
+          <view class='flex-item manage-symbol'>></view>
+        </view>
+      </navigator>
+    </view> -->
+    <view  class='manage-personal'>
+      <view class='manage-url' bindtap='download'>
+        <view class='manage flex-wrp'>
+          <image src='../../images/download.png' class='manage-image'></image> 
+          <view class='flex-item manage-text'>推广海报</view>
+          <view class='flex-item manage-symbol'>></view>
+        </view>
+      </view>
+    </view>
+    <view  class='manage-personal'>
+       <button class='mobileButton manage-url' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 
+        <!-- <view class='manage-url' bindtap='download'> -->
+          <view class='manage flex-wrp'>
+            <image src='../../images/mobile.png' class='manage-image'></image> 
+            <view class='flex-item manage-text'>绑定手机号</view>
+            <view class='flex-item manage-symbol'>></view>
+          </view>
+        <!-- </view> -->
+       </button> 
+    </view>
+    <view  class='manage-personal'>
+      <view class='manage-url' bindtap='showRebate'>
+        <view class='manage flex-wrp'>
+          <image src='../../images/download.png' class='manage-image'></image> 
+          <view class='flex-item manage-text'>奖励中心</view>
+          <view class='flex-item manage-symbol'>></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<canvas style="width: 750px; height: 1337px; position: fixed; margin-top:500px" canvas-id="myCanvas"></canvas>
+
+<modal hidden="{{hiddenmodalput}}" title="绑定手机号" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="updateMobile">
+    <!-- <input type='text'placeholder="请输入手机号" auto-focus/> -->
+    <view class='mobile-input flex-row'>
+      <input class='mobile' type='text' placeholder="请输入手机号" name='mobile' bindinput ="mobileInput" />
+      <view class='get-code' wx:if="{{!isShow}}"  bindtap='getCode'>获取验证码</view>
+      <view class='get-code' wx:if="{{isShow}}">{{sec}}秒后重新发送</view>
+    </view>
+    <input type='text' placeholder="验证码" name='mobile' bindinput ="vCodeInput" />
+</modal>

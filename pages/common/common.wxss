@@ -1,0 +1,38 @@
+page{
+    background-color: #ffffff;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+    font-size: 14px;
+}
+.navigator-hover{
+    background: none;
+}
+
+.hide{
+ display: none;
+}
+
+.show{ 
+ display: block;
+}
+
+/*修改提示文字的颜色*/
+
+input::-webkit-input-placeholder { /* WebKit browsers */ 
+  font-size: 12px;
+} 
+
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+  font-size: 12px;
+} 
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+  font-size: 12px;
+} 
+
+input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+  font-size: 12px;
+} 
+
+image {
+  width: 100%;
+}

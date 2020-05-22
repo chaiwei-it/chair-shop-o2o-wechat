@@ -1,0 +1,10 @@
+<view class='person' wx:for="{{list}}" wx:key="index">
+  <view class='left'>
+    <view class='left-top' wx:if='{{item.status===1}}'>零钱提现--提现中</view>
+    <view class='left-top' wx:if='{{item.status===2}}'>零钱提现--已到账</view>
+    <view class='left-top' wx:if='{{item.status===3}}'>零钱提现--不通过（{{item.reason}}）</view>
+    <view class='left-bottom'>{{item.createData}}</view>
+  </view>
+  <view class='right'>￥{{item.price}}</view>
+</view>
+

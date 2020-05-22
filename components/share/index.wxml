@@ -1,0 +1,20 @@
+<!--弹出框  -->
+<view class='cw-share'>
+  <view class='code'>
+    <image class='code-image'  src='{{imageUrl}}' ></image>
+    <view class="code-popup">
+      <view class='towx'>
+        <button open-type="share" hover-class="none">
+          <image class='towx-image' src='/images/cart/towx.png'></image>
+          <view class='towx-name' >分享好友</view>
+        </button>
+      </view>
+      <view class='toimage' catchtap="toImage">
+        <button hover-class="none">
+          <image class='toimage-image'  src='/images/cart/toimage.png'></image>
+          <view class='toimage-name'>保存图片</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

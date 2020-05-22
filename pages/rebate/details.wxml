@@ -1,0 +1,29 @@
+<view class='goods-list'>
+    <cw-order-goods order="{{order}}"></cw-order-goods>
+  </view>
+
+  <view class='order-details'>
+    <view class='title'>
+      <cw-column name='订单信息'></cw-column>
+    </view>
+    <view class='order-time'>
+      <view wx:if="{{createTime}}">创建时间　　　<text>{{createTime}}</text></view>
+      <view wx:if="{{paymentTime}}">支付时间　　　<text>{{paymentTime}}</text></view>
+      <view wx:if="{{shippingTime}}">发货时间　　　<text>{{shippingTime}}</text></view>
+      <view wx:if="{{finnshedTime}}">完成时间　　　<text>{{finnshedTime}}</text></view>
+    </view>
+  </view>
+
+  <view class='order-rebate'>
+    <view class='rebate' wx:for="{{rebatiList}}" wx:key="index">
+    <view class='rebate-name' wx:if='{{item.gradeType > 3}}'>区域红包:</view>
+      <view class='rebate-name' wx:if='{{item.gradeType == 1}}'>会员红包:</view>
+      <view class='rebate-name' wx:if='{{item.gradeType == 2}}'>VIP红包:</view>
+      <view class='rebate-name' wx:if='{{item.gradeType == 3}}'>总代红包:</view>
+      <view class='rebate-price'>¥{{item.rabatePrice}}</view>
+    </view>
+    <view class='rebate-total'>
+      <view class='rebate-name'>合计:</view>
+      <view class='rebate-price'>¥{{total}}</view>
+    </view>
+  </view>

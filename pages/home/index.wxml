@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<scroll-view class="navbar {{showView?'show':'hide'}}" style=" z-index:50" scroll-x>
+  <!--循环-->
+  <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+    <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+    {{item.name}}
+    <!--<text  bindtap="navbarTap">{{item}}</text>-->
+  </view>
+</scroll-view>
+
+<!--木头推荐-->
+<view hidden="{{currentTab !== 0}}" id="one">
+  <!--banner-->
+  <cw-banner bannerList='{{banner}}'></cw-banner>
+
+  <image class='slogan' src='/images/index/banner.png'></image>
+
+  <!-- 新品 -->
+  <view class='newest'>
+    <cw-column name='新品'></cw-column>
+    <view class='goods-small' wx:for="{{newest}}" wx:key="index">
+      <cw-goods-small  goods='{{item}}'></cw-goods-small>
+    </view>
+  </view>
+
+  <!-- 热销 -->
+  <view class='hot'>
+    <cw-column name='热销'></cw-column>
+    <view class='goods-small' wx:for="{{hot}}" wx:key="index">
+      <cw-goods-small  goods='{{item}}'></cw-goods-small>
+    </view>
+  </view>
+
+  <!-- 推荐 -->
+  <view class='recommend'>
+    <cw-column name='推荐'></cw-column>
+    <view class='goods-small' wx:for="{{recommend}}" wx:key="index">
+      <cw-goods-small  goods='{{item}}'></cw-goods-small>
+    </view>
+  </view>
+
+  <!-- 所有商品 -->
+  <view class='all-goods'>
+    <cw-column name='平台自营'></cw-column>
+    <view class='goods-length' wx:for="{{list}}" wx:key="index">
+      <cw-goods-length  goods='{{item}}'></cw-goods-length>
+    </view>
+  </view>
+</view>
+  
+<view class='category-list' hidden="{{currentTab === 0}}">
+  <view class='goods-small' wx:for="{{list}}" wx:key="index">
+    <cw-goods-small  goods='{{item}}'></cw-goods-small>
+  </view>
+</view>

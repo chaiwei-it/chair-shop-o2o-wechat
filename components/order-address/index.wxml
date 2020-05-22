@@ -1,0 +1,16 @@
+<!--components/recommend/index.wxml-->
+<view class='cw-order-address'>
+  <view class='status-name'>
+    <view class='status-image'>收</view>
+  </view>
+  <view class='status-address'>
+    <view class='address-top'>
+      <view class='address-name'>{{address.username}}</view>
+      <view>{{address.mobile}}</view>
+    </view>
+    <!-- <view class='address-bottom'>{{address.provinceName}} {{address.cityName}} {{address.areaName}} {{address.address}}</view> -->
+    <view class='details-address'>{{address.provinceName}} {{address.cityName}} {{address.areaName}}</view>
+    <view class='details-address'>{{address.address}}</view>
+  </view>
+  
+</view>

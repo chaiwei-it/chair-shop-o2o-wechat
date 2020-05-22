@@ -1,0 +1,45 @@
+/* components/recommend/index.wxss */
+.cw-button {
+  width: 750rpx;
+  height: 82rpx;
+  background-color: #fff;
+
+}
+
+.underline {
+  width: 690rpx;
+  height: 82rpx;
+  margin-left: 30rpx;
+  box-sizing: border-box;
+  border-bottom: solid 1rpx #eeeeee;
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  width: 42rpx;
+  height: 42rpx;
+  margin: 20rpx;
+}
+
+.right-image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.name {
+  width: 390rpx;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.toName {
+  width: 200rpx;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 20rpx;
+  color: #999999;
+  text-align: right
+}

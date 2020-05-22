@@ -1,0 +1,42 @@
+/* pages/partner/select.wxss */
+
+
+.manage-personal{
+  width: 100%;
+  background-color: #FFF;
+  margin-bottom: 2px;
+}
+
+.manage-url{
+  width: 100%;
+  
+}
+.manage{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction:row;
+}
+
+.manage-image{
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
+
+.manage-text{
+  height: 50px;
+  width: 50%;
+  line-height: 50px;
+  font-size: 14px;
+}
+
+.manage-symbol{
+  height: 50px;
+  width: 40%;
+  line-height: 50px;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 20px;
+  float: right;
+}

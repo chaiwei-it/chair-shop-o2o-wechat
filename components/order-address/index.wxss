@@ -1,0 +1,68 @@
+/* components/recommend/index.wxss */
+.cw-order-address {
+  width: 750rpx;
+  height: 128rpx;
+  overflow: auto;
+  flex-direction:row;
+  display: flex;
+}
+
+.status-name{
+  height: 128rpx;
+  width: 128rpx;
+}
+
+.status-image{
+  height: 56rpx;
+  width: 56rpx;
+  margin: 36rpx; 
+  background-color: #f79307;
+  color: #fff;
+  border-radius: 28rpx;
+  text-align: center;
+  line-height: 56rpx;
+}
+
+.status-address{
+  height: 128rpx;
+  width: 622rpx;
+}
+
+.address-top{
+  flex-direction:row;
+  display: flex;
+  height: 30rpx;
+  margin-top: 20rpx;
+}
+
+.address-name {
+  max-width: 300rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.address-top view{
+  line-height: 30rpx;
+  font-size: 24rpx;
+}
+
+/* .address-bottom{
+  display: flex;
+  height: 60rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
+  justify-content: space-around;
+  flex-direction: column;
+  word-break: break-all
+} */
+
+.details-address{
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 22rpx;
+  width: 450rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

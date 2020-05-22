@@ -1,0 +1,5 @@
+<!--components/order/index.wxml-->
+<view class='cw-rebate' bindtap='toPage'>
+  <view class='price'>￥{{price}}</view>
+  <view class='name'>{{name}}</view>
+</view>

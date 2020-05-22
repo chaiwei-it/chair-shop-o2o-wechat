@@ -1,0 +1,126 @@
+/**index.wxss**/
+@import '../common/common.wxss';
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f9f8f8;
+}
+.notice {
+    width:28rpx;
+    height:28rpx;
+    color:#fff;
+    text-align:center;
+    background-color:#ec9e14;
+    border-radius:50%;
+    position:absolute;
+    float:left;
+   /* margin-top: 8rpx;*/
+   top:5rpx;
+    font-size: 15rpx;
+    right:30rpx;
+    line-height:30rpx; }
+
+/*顶部导航样式*/
+  .navbar{ 
+ /* flex: none;  */
+ width: 100%;
+ display: flex; 
+ background: #eeeeee; 
+ /* margin-top: 20rpx; */
+ z-index: 50; 
+ overflow: hidden;
+ white-space: nowrap;
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center;
+ line-height: 80rpx; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+ width: 100px;
+ display: inline-block;
+} 
+.navbar .item.active{ 
+ color: #ec9e14; 
+ font-size: 24rpx;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #ec9e14; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+}
+
+.index{
+  height: 100%;
+  width: 100%;
+  background-color: #fafafa; 
+}
+
+.slogan{
+  width: 750rpx;
+  height: 60rpx;
+}
+
+.scroll-header{
+display: flex;
+white-space: nowrap;  
+}
+
+/* 首页分类 */
+
+.newest, .hot, .recommend{
+  width: 100%;
+  background-color: #FFF;
+  margin-top: 10px;
+}
+
+.category-name{
+  height: 40px;
+  line-height: 40px;
+  /* margin-top: 20px; */
+  margin-left: 20px;
+}
+
+.goods-small{
+  margin-left: 28rpx;
+  display:inline-block;
+  /* margin-top: 16rpx; */
+  margin-bottom: 28rpx;
+}
+
+
+
+.all-goods{
+  width: 100%;
+  background-color: #FFF;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.goods-length {
+  margin-left: 28rpx;
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.category-list{
+  width: 100%;
+  background: #fff
+}
+
+
+
+
+

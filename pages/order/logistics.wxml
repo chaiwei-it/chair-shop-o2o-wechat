@@ -1,0 +1,13 @@
+<!--pages/order/logistics.wxml-->
+<view class='shipping'>
+  <view class='shipping-list' wx:for="{{shipping}}" wx:key="index">
+    <view class='shipping-status shipping-status-now' wx:if="{{index==0}}">
+      <view class='shipping-time'>{{item.ftime}}</view>
+      <view class='shipping-context'>{{item.context}}</view>
+    </view>
+    <view class='shipping-status' wx:else>
+      <view class='shipping-time'>{{item.ftime}}</view>
+      <view class='shipping-context'>{{item.context}}</view>
+    </view>
+  </view>
+</view>

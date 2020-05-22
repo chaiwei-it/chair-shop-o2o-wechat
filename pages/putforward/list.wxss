@@ -1,0 +1,47 @@
+@import "../../lib/weui.wxss";
+
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #d5d5d5;
+}
+
+.person{
+  width: 690rpx;
+  height: 130rpx;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.left{
+  width: 400rpx;
+  float: left;
+  height: 130rpx;
+  margin-left: 10rpx;
+}
+
+.left-top{
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.left-bottom{
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.right{
+  float: right;
+  width: 250rpx;
+  margin-right: 30rpx;
+  text-align: right;
+  color: #f89b2b;
+  height: 130rpx;
+  line-height: 130rpx;
+  font-size: 32rpx;
+}

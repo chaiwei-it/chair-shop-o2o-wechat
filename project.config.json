@@ -1,0 +1,97 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.2",
+	"appid": "wx11cb8cf109197bfd",
+	"projectname": "small_shop",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": 0,
+					"name": "个人中心",
+					"pathName": "pages/personal/index",
+					"query": "",
+					"scene": "1012"
+				},
+				{
+					"id": 1,
+					"name": "商品详情",
+					"pathName": "pages/goods/details",
+					"query": "id=f0d82764b33a475ca7d5438cf24ccffc",
+					"scene": "1012"
+				},
+				{
+					"id": 2,
+					"name": "订单列表",
+					"pathName": "pages/order/list",
+					"query": "id=3",
+					"scene": "1001"
+				},
+				{
+					"id": 3,
+					"name": "物流信息",
+					"pathName": "pages/order/logistics",
+					"query": "shippingCode=3377276442587",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "升级",
+					"pathName": "pages/partner/index",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "提现中心",
+					"pathName": "pages/putforward/index",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "首页",
+					"pathName": "pages/home/index",
+					"query": "scene=2a743f8660814c4a8c19b85826e11e72"
+				}
+			]
+		}
+	}
+}

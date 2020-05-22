@@ -1,0 +1,98 @@
+@import "../../lib/weui.wxss";
+
+/*顶部导航样式*/
+  .navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #eeeeee; 
+ z-index: 50; 
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center;
+ line-height: 60rpx; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active{ 
+ color: #ec9e14; 
+ font-size: 24rpx;
+ font-family: Microsoft YaHei;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #ec9e14; 
+ font-size: 24rpx;
+ color: #666666;
+ font-family: Microsoft YaHei;
+}
+
+.person{
+  width: 690rpx;
+  height: 180rpx;
+  margin: 10rpx 30rpx;
+  position: relative;
+}
+
+.person-image{
+  width: 690rpx;
+  height: 180rpx;
+}
+
+.rabate-price{
+  position: absolute;
+  height: 180rpx;
+  width: 220rpx;
+  text-align: center;
+  line-height: 180rpx;
+  top: 0;
+  left: 0;
+  font-size: 50rpx;
+  color: #fff;
+}
+
+.rabate-name{
+  position: absolute;
+  height: 40rpx;
+  line-height: 40rpx;
+  left: 250rpx;
+  top: 30rpx;
+  width: 410rpx;
+  font-size: 24rpx;
+  display: -webkit-box; 
+  -webkit-line-clamp: 1; 
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+}
+
+.rabate-content{
+  position: absolute;
+  height: 40rpx;
+  line-height: 40rpx;
+  left: 250rpx;
+  top: 70rpx;
+  width: 410rpx;
+  font-size: 24rpx;
+  display: -webkit-box; 
+  -webkit-line-clamp: 1; 
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+}
+
+.rabate-time{
+  position: absolute;
+  height: 40rpx;
+  line-height: 40rpx;
+  left: 250rpx;
+  top: 120rpx;
+  width: 410rpx;
+  font-size: 24rpx;
+}

@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/index",
+    "pages/goods/details",
+    "pages/cart/cart",
+    "pages/personal/personal",
+    "pages/logs/logs",
+    "pages/orders/list",
+    "pages/orders/confirm",
+    "pages/orders/details",
+    "pages/address/add",
+    "pages/address/list",
+    "pages/test/test",
+    "pages/personal/index",
+    "pages/user/list",
+    "pages/putforward/index",
+    "pages/putforward/list",
+    "pages/rebate/list",
+    "pages/partner/index",
+    "pages/partner/agent",
+    "pages/partner/pay",
+    "pages/partner/paycode",
+    "pages/order/list",
+    "pages/order/details",
+    "pages/order/confirm",
+    "pages/order/logistics",
+    "pages/image/index",
+    "pages/rebate/details"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "木头商城",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#9a999a",
+    "selectedColor": "#f79307",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "images/index/index-never.png",
+        "selectedIconPath": "images/index/index.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/index/cart-never.png",
+        "selectedIconPath": "images/index/cart.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "iconPath": "images/index/person-never.png",
+        "selectedIconPath": "images/index/person.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

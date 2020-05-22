@@ -1,0 +1,4 @@
+ <!--屏幕背景变暗的背景  -->
+<view class='cw-curtain'>
+  <view class="curtain" ></view>
+</view>

@@ -1,0 +1,5 @@
+<!--components/recommend/index.wxml-->
+<view class='cw-order-status'>
+  <view class='status-name'>{{status}}</view>
+  <image class='status-image' src='{{url}}'></image>
+</view>

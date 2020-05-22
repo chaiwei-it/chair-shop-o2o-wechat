@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "cw-order-goods": "/components/order-goods/index",
+    "cw-order-status": "/components/order-status/index",
+    "cw-order-address": "/components/order-address/index",
+    "cw-column": "/components/column/index"
+  }
+}

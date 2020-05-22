@@ -1,0 +1,30 @@
+<!--pages/user/list.wxml-->
+<view class="navbar" style=" z-index:50">
+  <!--循环-->
+  <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+    <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+    {{item}}
+    <!--<text  bindtap="navbarTap">{{item}}</text>-->
+  </view>
+</view>
+
+<view class='list'>
+  <block wx:for="{{list}}" wx:key="index">
+    <view class='person flex-row'>
+      <view class='left'>
+        <image class='image' src='{{item.headImage}}'></image>
+      </view>
+      <view class='right'>
+        <view class='right-top'>{{item.username}}</view>
+        <view class="right-center" wx:if="{{item.grade == 1}}">普通会员</view>
+        <view class="right-center" wx:elif="{{item.grade == 2}}">VIP</view>
+        <view class="right-center" wx:elif="{{item.grade == 3}}">总代</view>
+        <view class="right-center" wx:elif="{{item.grade == 4}}">区域合伙人</view>
+        <view class="right-center" wx:elif="{{item.grade == 5}}">市级合伙人</view>
+        <view class="right-center" wx:elif="{{item.grade == 6}}">省级合伙人</view>
+        <view class="right-center" wx:else>普通用户</view>
+        <view class='right-bottom'>加入时间：{{item.createDate}}</view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "cw-button": "/components/button/index",
+    "my-order": "/components/order-navigation/index",
+    "my-rebate": "/components/rebate/index"
+  }
+}

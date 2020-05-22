@@ -1,0 +1,26 @@
+/* components/recommend/index.wxss */
+.cw-order-status {
+  width: 750rpx;
+  height: 140rpx;
+  overflow: auto;
+  background-color: #f0990f;
+  flex-direction:row;
+  display: flex;
+}
+
+.status-name{
+  height: 34rpx;
+  width: 300rpx;
+  margin-left: 72rpx;
+  margin-top: 50rpx; 
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.status-image{
+  height: 100rpx;
+  width: 100rpx;
+  margin-left: 100rpx;
+  margin-top: 20rpx; 
+}
+
